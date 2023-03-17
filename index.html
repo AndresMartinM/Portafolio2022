@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<head>
+
+<title>Portafolio | Andres Martin</title>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Zilla+Slab:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
+
+<style> 
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Zilla+Slab:ital,wght@0,400;1,600&display=swap');
+
+body {
+background : #eee;
+margin : 8px;
+}
+
+* {
+box-sizing: border-box;
+}
+
+#col-1 {
+width : 30%;
+padding : 30px;
+float : left;
+display : block;
+}
+#col-2 {
+width : 70%;
+padding : 30px;
+float : left;
+display : block;
+position : relative;
+}
+
+
+.tarjetaLarga {
+width : 300px;
+height : 433px;
+float : left;
+display : block;
+position : relative;
+margin : 15px;
+background : #fff;
+border-radius : 15px;
+box-shadow : 0px 2px 5px #aaa;
+}
+
+.avatar {
+border-radius : 50%;
+background-image: url('avatar.jpg');
+background-size: cover;
+}
+
+.tarjetaLarga .avatar {
+position : relative;
+float : none;
+border: 10px solid #fff;
+top : 10px;
+margin-left : auto;
+margin-right : auto;
+width : 120px;
+height : 120px;
+}
+
+.tarjetaLarga .foto {
+width : 100%;
+position : absolute;
+height : 110px;
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+background : #ccc;
+background-size: cover;
+}
+.tarjetaLarga .titulo {
+color : #666;
+font-size : 18px;
+font-family :'Montserrat Alternates', sans-serif;
+font-weight: bold;
+width : 80%;
+margin-left : auto;
+margin-right : auto;
+text-align : center;
+}
+
+.etiqueta {
+width : 93.3%;
+height : 40px;
+float : none;
+margin : 14px;
+margin-left: auto;
+margin-right: auto;
+display : block;
+position : relative;
+}
+.etiqueta p {
+color : #666;
+font-size : 12px;
+font-family: 'Zilla Slab', serif;
+top : 3px;
+}
+.etiqueta .cuerpo {
+width : 100%;
+height : 100%;
+border-radius : 20px;
+background : #eee;
+}
+.etiqueta .link {
+width : 32px;
+height : 32px;
+position : relative;
+float : right;
+margin-right : 4px;
+top : 4px;
+border-radius : 50%;
+background : #fff;
+}
+.etiqueta .texto {
+height : 32px;
+width : 40%;
+position : relative;
+float : left;
+margin-left : 4px;
+top : 4px;
+}
+.etiqueta .icon {
+filter:  opacity(60%);
+}
+.etiqueta .texto * {
+position : absolute;
+height : 100%;
+float : left;
+margin : 0;
+margin-left : 3px;
+}
+.etiqueta .texto p{
+margin-left : 42px;
+}
+.etiqueta .link img {
+width : 18px;
+margin : 7px;
+filter:  opacity(70%);
+}
+
+
+.tarjeta {
+width : 300px;
+height : 200px;
+float : left;
+display : block;
+position : relative;
+margin : 16px;
+}
+
+.tarjeta p {
+text-align : right;
+margin : 12px;
+}
+
+.tarjeta .cuerpo {
+width : 100%;
+height : 100%;
+background : #fff;
+border-radius : 15px;
+box-shadow : 0px 2px 5px #aaa;
+}
+.tarjeta .cuerpo:hover {
+box-shadow : 0px 2px 5px #777;
+}
+
+.tarjeta .png:hover{
+width : 65%;
+}
+
+.tarjeta .fecha {
+position: absolute;
+top : 0px;
+right : 0px;
+color : #fff;
+font-size : 18px;
+font-family: 'Zilla Slab', serif;
+font-style: oblique;
+}
+
+.tarjeta .foto {
+width : 100%;
+height : 110px;
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+background-size: cover;
+}
+
+.tarjeta .png{
+max-width : 200px;
+width : 55%;
+float : left;
+top : 0;
+left : 0;
+position : absolute;
+transition : width 1s;
+}
+
+.tarjeta .pie {
+width : 210px;
+float : right;
+}
+
+.tarjeta .titulo {
+color : #666;
+font-size : 24px;
+font-family :'Montserrat Alternates', sans-serif;
+}
+
+.inicio a{
+width : 40px;
+height : 40px;
+position : fixed;
+float : left;
+top : 4px;
+left : 4px;
+border-radius : 50%;
+background : #fff;
+box-shadow : 0px 2px 5px #aaa;
+}
+.inicio img {
+width : 24px;
+margin : 8px;
+filter:  opacity(70%);
+}
+
+footer {
+width : 97.5%;
+height : 40px;
+float : left;
+display : block;
+position : relative;
+margin : 15px;
+background : #ccc;
+border-radius : 20px;
+box-shadow : 0px 2px 5px #aaa;
+}
+footer p {
+position: absolute;
+float : right;
+top : -2px;
+right : 24px;
+color : #666;
+font-size : 14px;
+font-family: 'Zilla Slab', serif;
+}
+
+@media only screen and (max-width: 720px) {
+#col-1 {
+width : 100%;
+}
+#col-2 {
+width : 100%;
+}
+.tarjetaLarga {
+float : none;
+margin-left: auto;
+margin-right: auto;
+}
+.tarjeta {
+float : none;
+margin-left: auto;
+margin-right: auto;
+}
+}
+@media only screen and (max-width: 366px) {
+.tarjetaLarga {
+width : 90%;
+}
+.etiqueta p {
+font-size : 10px;
+}
+.tarjeta {
+width : 90%;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+
+<div class="tarjetaLarga">
+<div class="foto"></div>
+<div class="avatar"></div>
+<! nombre >
+<p class="titulo">Andrés A. Martin Mena</p>
+
+<!  instagram >
+<div class="etiqueta">
+<div class="cuerpo">
+<div class="texto"><div class="icon"><img src="instagram.png"></div><p>Instagram @andresmartin_elmartin</p></div>
+<div class="link"><a href="javascript:copyText('https://www.instagram.com/andresmartin_elmartin/');"><img src="copy.png"></a></div>
+<div class="link"><a href="https://www.instagram.com/andresmartin_elmartin/"  target="_blank"><img src="link.png"></a></div>
+</div>
+</div>
+
+<!  artstation >
+<div class="etiqueta">
+<div class="cuerpo">
+<div class="texto"><div class="icon"><img src="artstation.png"></div><p>ArtStation andresamartinm</p></div>
+<div class="link"><a href="javascript:copyText('https://www.artstation.com/andresamartinm');"><img src="copy.png"></a></div>
+<div class="link"><a href="https://www.artstation.com/andresamartinm"  target="_blank"><img src="link.png"></a></div>
+</div>
+</div>
+
+<!  youtube >
+<div class="etiqueta">
+<div class="cuerpo">
+<div class="texto"><div class="icon"><img src="youtube.png"></div><p>YouTube: @elmartin3553</p></div>
+<div class="link"><a href="javascript:copyText('https://www.youtube.com/@elmartin3553');"><img src="copy.png"></a></div>
+<div class="link"><a href="https://www.youtube.com/@elmartin3553"  target="_blank"><img src="link.png"></a></div>
+</div>
+</div>
+
+<!  correo >
+<div class="etiqueta">
+<div class="cuerpo">
+<div class="texto"><div class="icon"><img src="correo.png"></div><p>Correo andres.a.martin.m@gmail.com</p></div>
+<div class="link"><a href="javascript:copyText('andres.a.martin.m@gmail.com');"><img src="copy.png"></a></div>
+<div class="link"><a href="mailto:andres.a.martin.m@gmail.com"><img src="send_mail.png"></a></div>
+</div>
+</div>
+
+
+
+</div>
+
+
+<script>//<![CDATA[
+function copyText(texto){
+
+var aux = document.createElement("input");
+aux.setAttribute("value", texto);
+document.body.appendChild(aux);
+aux.select();
+document.execCommand("copy");
+document.body.removeChild(aux);
+
+}
+
+//]]></script>
+
+
+<a class="tarjeta" href="01/page.html"><div class="cuerpo">
+<img class="png" src="01.png">
+<p class="fecha">Diciembre 2022</p><div class="foto" style="background-image: url('01.jpg');"></div>
+<div class="pie"><p class="titulo">Comedero para Abejorros</p></div></div></a>
+
+<a class="tarjeta" href=""><div class="cuerpo">
+<img class="png" src="02.png">
+<p class="fecha">Diciembre 2022</p><div class="foto" style="background-image: url('02.jpg');"></div>
+<div class="pie"><p class="titulo">Biomaterial Tomchi</p></div></div></a>
+
+<a class="tarjeta" href=""><div class="cuerpo">
+<img class="png" src="03.png">
+<p class="fecha">Diciembre 2022</p><div class="foto" style="background-image: url('03.jpg');"></div>
+<div class="pie"><p class="titulo">Trouble Machine</p></div></div></a>
+
+<a class="tarjeta" href=""><div class="cuerpo">
+<img class="png" src="04.png">
+<p class="fecha">Noviembre 2022</p><div class="foto" style="background-image: url('04.jpg');"></div>
+<div class="pie" style="width : 200px;"><p class="titulo" >Organillo para Bicicleta</p></div></div></a>
+
+<a class="tarjeta" href=""><div class="cuerpo">
+<img class="png" src="05.png">
+<p class="fecha">Enero 2022</p><div class="foto" style="background-image: url('05.jpg');"></div>
+<div class="pie"><p class="titulo">Proyecto Codice</p></div></div></a>
+
+<a class="tarjeta" href=""><div class="cuerpo">
+<img class="png" src="06.png">
+<p class="fecha">Julio 2022</p><div class="foto" style="background-image: url('06.jpg');"></div>
+<div class="pie" style="width : 190px;"><p class="titulo">Primavera del Libro</p></div></div></a>
+
+<a class="tarjeta" href=""><div class="cuerpo">
+<img class="png" src="07.png">
+<p class="fecha">2020 - 2022</p><div class="foto" style="background-image: url('07.jpg');"></div>
+<div class="pie"><p class="titulo">Diseño de Personajes</p></div></div></a>
+
+<a class="tarjeta" href=""><div class="cuerpo">
+<img class="png" src="08.png">
+<p class="fecha">2020 - 2022</p><div class="foto" style="background-image: url('08.jpg');"></div>
+<div class="pie"><p class="titulo">Proyectos Gráficos</p></div></div></a>
+
+<a class="tarjeta" href=""><div class="cuerpo">
+<img class="png" src="09.png">
+<p class="fecha">2022</p><div class="foto" style="background-image: url('09.jpg');"></div>
+<div class="pie"><p class="titulo">Videojuegos</p></div></div></a>
+
+<a class="tarjeta" href=""><div class="cuerpo">
+<img class="png" src="10.png">
+<p class="fecha">2021 - 2022</p><div class="foto" style="background-image: url('10.jpg');"></div>
+<div class="pie"><p class="titulo">Blender Renders</p></div></div></a>
+<!--
+<a class="tarjeta" href=""><div class="cuerpo">
+<img class="png" src="11.png">
+<p class="fecha">Diciembre 2022</p><div class="foto" style="background-image: url('11.jpg');"></div>
+<div class="pie"><p class="titulo">Squirtle</p></div></div></a>
+
+<a class="tarjeta" href=""><div class="cuerpo">
+<img class="png" src="12.png">
+<p class="fecha">Diciembre 2022</p><div class="foto" style="background-image: url('12.jpg');"></div>
+<div class="pie"><p class="titulo">Charizard</p></div></div></a>
+ -->
+
+<div class="inicio">
+<a href="index.html"><img src="home.png"></a>
+</div>
+
+<footer>
+<p>andres.a.martin.m@gmail.com  ·  Andrés Martin 2023</p>
+</footer>
+
+</body>

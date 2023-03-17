@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<head>
+
+<title>Comedero para Abejorros</title>
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Zilla+Slab:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
+
+<style> 
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Zilla+Slab:ital,wght@0,400;1,600&display=swap');
+
+body {
+background : #eee;
+margin : 8px;
+font-size : 16px;
+font-family: 'Zilla Slab', serif;
+}
+
+* {
+box-sizing: border-box;
+}
+
+.cabecera {
+width : 100%;
+height : 200px;
+position : relative;
+background : #ccc;
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+background-size: cover;
+}
+
+.cabecera .png {
+width : 40%;
+position : absolute;
+top : -8px;
+}
+
+.gradiente {
+width : 100%;
+height : 100%;
+background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.6));
+}
+
+#cuerpo {
+width : 60%;
+margin : auto;
+margin-top : 0;
+background : #f00;
+color : #333;
+}
+
+#col-1 {
+width : 65%;
+padding : 30px;
+padding-bottom : 60px;
+float : right;
+display : block;
+text-align: justify;
+}
+#col-1 p {
+margin : 0;
+margin-bottom : 24px;
+}
+
+#col-2 {
+width : 35%;
+padding : 30px;
+padding-top : 240px;
+padding-bottom : 60px;
+float : left;
+display : block;
+position : relative;
+}
+#col-2 .imagen {
+margin-bottom : 18px;
+float : right;
+min-width : 210px;
+}
+#col-2 .imagen img {
+width : 100%;
+margin : 0;
+box-shadow : 0px 2px 5px #aaa;
+}
+#col-2 .imagen p {
+margin : 0;
+font-size : 12px;
+text-align : right;
+}
+
+.tarjetaLarga {
+width : 300px;
+height : 433px;
+float : left;
+display : block;
+position : relative;
+margin : 15px;
+background : #fff;
+border-radius : 15px;
+box-shadow : 0px 2px 5px #aaa;
+}
+
+.avatar {
+border-radius : 50%;
+background-image: url('avatar.jpg');
+background-size: cover;
+}
+
+.tarjetaLarga .avatar {
+position : relative;
+float : none;
+border: 10px solid #fff;
+top : 10px;
+margin-left : auto;
+margin-right : auto;
+width : 120px;
+height : 120px;
+}
+
+.tarjetaLarga .foto {
+width : 100%;
+position : absolute;
+height : 110px;
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+background : #ccc;
+background-size: cover;
+}
+.tarjetaLarga .titulo {
+color : #666;
+font-size : 18px;
+font-family :'Montserrat Alternates', sans-serif;
+font-weight: bold;
+width : 80%;
+margin-left : auto;
+margin-right : auto;
+text-align : center;
+}
+
+.etiqueta {
+width : 93.3%;
+height : 40px;
+float : none;
+margin : 14px;
+margin-left: auto;
+margin-right: auto;
+display : block;
+position : relative;
+}
+.etiqueta p {
+color : #666;
+font-size : 12px;
+font-family: 'Zilla Slab', serif;
+top : 3px;
+}
+.etiqueta .cuerpo {
+width : 100%;
+height : 100%;
+border-radius : 20px;
+background : #eee;
+}
+.etiqueta .link {
+width : 32px;
+height : 32px;
+position : relative;
+float : right;
+margin-right : 4px;
+top : 4px;
+border-radius : 50%;
+background : #fff;
+}
+.etiqueta .texto {
+height : 32px;
+width : 40%;
+position : relative;
+float : left;
+margin-left : 4px;
+top : 4px;
+}
+.etiqueta .icon {
+filter:  opacity(60%);
+}
+.etiqueta .texto * {
+position : absolute;
+height : 100%;
+float : left;
+margin : 0;
+margin-left : 3px;
+}
+.etiqueta .texto p{
+margin-left : 42px;
+}
+.etiqueta .link img {
+width : 18px;
+margin : 7px;
+filter:  opacity(70%);
+}
+
+
+.tarjeta {
+width : 300px;
+height : 200px;
+float : left;
+display : block;
+position : relative;
+margin : 16px;
+}
+
+.tarjeta p {
+text-align : right;
+margin : 12px;
+}
+
+.tarjeta .cuerpo {
+width : 100%;
+height : 100%;
+background : #fff;
+border-radius : 15px;
+box-shadow : 0px 2px 5px #aaa;
+}
+.tarjeta .cuerpo:hover {
+box-shadow : 0px 2px 5px #777;
+}
+
+.tarjeta .png:hover{
+width : 65%;
+}
+
+.tarjeta .fecha {
+position: absolute;
+top : 0px;
+right : 0px;
+color : #fff;
+font-size : 18px;
+font-family: 'Zilla Slab', serif;
+font-style: oblique;
+}
+
+.tarjeta .foto {
+width : 100%;
+height : 110px;
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+background-size: cover;
+}
+
+.tarjeta .png{
+max-width : 200px;
+width : 55%;
+float : left;
+top : 0;
+left : 0;
+position : absolute;
+transition : width 1s;
+}
+
+.tarjeta .pie {
+width : 210px;
+float : right;
+}
+
+.tarjeta .titulo {
+color : #666;
+font-size : 24px;
+font-family :'Montserrat Alternates', sans-serif;
+}
+
+.inicio a{
+width : 40px;
+height : 40px;
+position : fixed;
+float : left;
+top : 4px;
+left : 4px;
+border-radius : 50%;
+background : #fff;
+box-shadow : 0px 2px 5px #aaa;
+}
+.inicio img {
+width : 24px;
+margin : 8px;
+filter:  opacity(70%);
+}
+
+footer {
+width : 97.5%;
+height : 40px;
+float : left;
+display : block;
+position : relative;
+margin : 15px;
+background : #ccc;
+border-radius : 20px;
+box-shadow : 0px 2px 5px #aaa;
+}
+footer p {
+position: absolute;
+float : right;
+top : -2px;
+right : 24px;
+color : #666;
+font-size : 14px;
+font-family: 'Zilla Slab', serif;
+}
+
+@media only screen and (max-width: 720px) {
+#cuerpo {
+width : 80%;
+}
+#col-1 {
+width : 100%;
+}
+#col-2 {
+width : 100%;
+padding-top : 0;
+}
+.tarjetaLarga {
+float : none;
+margin-left: auto;
+margin-right: auto;
+}
+.tarjeta {
+float : none;
+margin-left: auto;
+margin-right: auto;
+}
+}
+@media only screen and (max-width: 366px) {
+.tarjetaLarga {
+width : 90%;
+}
+.etiqueta p {
+font-size : 10px;
+}
+.tarjeta {
+width : 90%;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<script>//<![CDATA[
+function copyText(texto){
+
+var aux = document.createElement("input");
+aux.setAttribute("value", texto);
+document.body.appendChild(aux);
+aux.select();
+document.execCommand("copy");
+document.body.removeChild(aux);
+
+}
+
+//]]></script>
+
+<div class="cabecera" style="background-image: url('01.jpg');"><div class="gradiente"></div>
+<div>
+<img class="png" src="01.png">
+<p>Titulo</p>
+<p>Subtitulo</p>
+
+</div>
+</div>
+
+
+
+<div id="cuerpo">
+
+
+<! texto >
+<div id="col-1">
+<p>Este proyecto se enmarca en la crisis medioambiental que actualmente vivimos, con miras a ayudar a la recuperación de la fauna nativa, específicamente del abejorro colorado, especie polinizadora de vital importancia para el ecosistema. Proponemos un dispositivo que sirva como punto de revitalización, entregando alimento y acogida a los abejorros que rondan los huertos urbanos, que han cobrado gran importancia en el último tiempo como lugares de conciencia medioambiental y social, siendo puntos de encuentro entre la ciudad, los ciudadanos y el ecosistema.</p>
+<p>El comedero está pensado como un producto que las mismas personas que participan en los huertos urbanos sean capaces fabricar con materiales que puedan conseguir, de ahí nace la receta del Tomchi, desarrollado a partir de elementos encontrados en la cocina. El ingrediente principal, y que conecta con la recuperación del abejorro, es la cáscara de tomates, se usa este ingrediente debido a que el abejorro es la especie dedicada a la polinización del tomate, y en su cultivo industrial se usa una especie invasora, en desmedro del abejorro nativo que queremos beneficiar con nuestro producto.</p>
+<p>El producto está diseñado como un lugar que recibe y alimenta al abejorro, formal y productivamente esta separado por 3 piezas, un recipiente para disponer alimento del largo del probóscide del abejorro colorado, un pétalo de forma cónica para recibir el gran cuerpo del abejorro inspirandonos en cómo lo hace la flor pasiflora, y un alambre para poder colgar el comedero en plantas, toldos o cordeles.</p>
+<! recursos >
+<div class="etiqueta"></div>
+<! autores >
+<div class="etiqueta"><div class="avatar"></div></div>
+</div>
+
+
+<! fotos>
+<div id="col-2">
+<div class="imagen"><img src="02.jpg"><p>Material Tomchi - usado para los pétalos</p></div>
+<div class="imagen"><img src="02.jpg"><p>Material Tomchi - usado para los pétalos</p></div>
+<div class="imagen"><img src="02.jpg"><p>Material Tomchi - usado para los pétalos</p></div>
+</div>
+
+</div>
+
+<div class="inicio">
+<a href="../index.html"><img src="../home.png"></a>
+</div>
+
+<footer>
+<p>andres.a.martin.m@gmail.com  ·  Andrés Martin 2023</p>
+</footer>
+
+</body>
